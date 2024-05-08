@@ -2,14 +2,14 @@
     "name": "tcl",
     "displayName": "Tcl",
     "description": "Tcl language support",
-    "version": "0.4.2",
+    "version": "0.4.3",
     "keywords": [
         "tcl",
         "tk"
     ],
-    "publisher": "bitwisecook",
+    "publisher": "NoReasonKen",
     "bugs": {
-        "url": "https://github.com/bitwisecook/tcl.git/LICENSE"
+        "url": "https://github.com/NoReasonKen/vscode-tcl.git/LICENSE"
     },
     "license": "MIT",
     "icon": "images/Tcl-powered.png",
@@ -18,7 +18,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/bitwisecook/tcl.git"
+        "url": "https://github.com/NoReasonKen/vscode-tcl.git"
     },
     "categories": [
         "Formatters",
