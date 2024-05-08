@@ -2312,7 +2312,7 @@ repository:
   tcl-info-exists:
     patterns:
       -
-        begin: \b(exists)\b
+        begin: \b(exists?)\b
         end: "(?=(?<!\\\\)(?:$|[\n;\\]}]))"
         beginCaptures:
           '1':
