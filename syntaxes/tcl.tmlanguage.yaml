@@ -2952,6 +2952,8 @@ repository:
           -
             include: '#variable'
           -
+            include: '#square-brackets'
+          -
             include: '#variable-bare-italic'
       -
         begin: '(?<=_regexp|_re)\s+(?={|")'
