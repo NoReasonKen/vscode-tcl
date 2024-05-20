@@ -2178,13 +2178,15 @@ repository:
           -
             include: '#tcl-namespace-eval'
           -
+            include: '#tcl-namespace-exists'
+          -
             include: '#tcl-namespace-entity-commands'
           -
             include: '#tcl-namespace-subcommands'
           -
             include: '#proc-call-args'
   tcl-namespace-eval:
-    begin: '\s*\b(eval|exists)\b\s*'
+    begin: '\s*\b(eval)\b\s*'
     end: "(?=(?<!\\\\\n)$|(?<!\\\\)\n|[}\\];{\\[])"
     beginCaptures:
       '1':
@@ -2196,6 +2198,23 @@ repository:
         include: '#namespace-name'
       -
         include: '#brackets'
+  tcl-namespace-exists:
+    patterns:
+      -
+        begin: \b(exists?)\b
+        end: "(?=(?<!\\\\)(?:$|[\n;\\]}]))"
+        beginCaptures:
+          '1':
+            name: keyword.control.namespace.exists.tcl
+        patterns:
+          -
+            include: '#variable'
+          -
+            include: '#line-escape'
+          -
+            include: '#square-brackets'
+          -
+            include: '#variable-bare-italic'
   tcl-namespace-entity-commands:
     begin: '\s*\b(delete)\b\s*'
     end: "(?=(?<!\\\\\n)$|(?<!\\\\)\n|[}\\];{\\[])"
