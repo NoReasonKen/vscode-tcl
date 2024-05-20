@@ -413,9 +413,9 @@ repository:
             include: '#constant-numeric'
   regular-expression:
     patterns:
-      -
-        match: "(?<!\\\\)(\\#.*)(?=\n|$)"
-        name: comment
+      # -
+      #   match: "(?<!\\\\)(\\#.*)(?=\n|$)"
+      #   name: comment
       -
         match: '(\.)([?+*])'
         captures:
